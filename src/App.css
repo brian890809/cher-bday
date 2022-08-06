@@ -1,6 +1,4 @@
-.App {
-  text-align: center;
-}
+/* 
 
 .App-logo {
   height: 40vmin;
@@ -35,4 +33,44 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.App {
+  display: flex;
+  height: 100%;
+  background-color:beige;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.rectangle {
+  margin: auto;
+  height: 90vh;
+  width: 80vw;
+  background-color:#9ec8d4;
+  animation: scale-up-center 1.2s ease 0s 1 normal none;
+}
+@keyframes scale-up-center {
+  0%{
+    transform: scaleX(.2);
+  }
+  100%{
+    transform: scaleX(1);
+  }
+}
+.happy-cher-day {
+  position: absolute;
+  color: white;
+}
+
+.gridContainer {
+  max-width: 60vw;
+  max-height: 60vh;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+img {
+  width: 100%;
+  height: 100%;
 }
