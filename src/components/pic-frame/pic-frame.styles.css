@@ -5,5 +5,8 @@
     border-radius:15px;
 }
 .imageFrameBase {
-    max-width: 30%;
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }

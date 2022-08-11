@@ -1,7 +1,6 @@
 import { css, Theme } from '@emotion/react';
 
 export const frameStyles = (theme, rounded) => {
-    console.log(rounded)
     return (css`
     max-width: 50%;
     ${borderRadius(rounded)}
