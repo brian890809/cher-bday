@@ -31,7 +31,7 @@ function App() {
         <Typography children="Cher" variant="h2"></Typography>
         <Typography children="Day !" variant="h2"></Typography>
       </div>
-      <Grid container spacing={0} className="gridContainer" columns={36}>
+      {/* <Grid container spacing={0} className="gridContainer" columns={36}>
         <Grid item xs={23}>
           <img src={img1} className="horizontal"/>
         </Grid>
@@ -44,7 +44,7 @@ function App() {
         <Grid item xs={23}>
           <img src={img4} className="horizontal"/>
         </Grid>
-      </Grid>
+      </Grid> */}
     </div>
   );
 }
