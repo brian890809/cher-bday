@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from '@mui/material'
+import Box from '@mui/material/Box';
 import {frameStyles} from './pic-frame.styles';
 import './pic-frame.styles.css'
 import { jsx, css } from '@emotion/react'
