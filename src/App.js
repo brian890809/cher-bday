@@ -1,31 +1,19 @@
-// import logo from './logo.svg';
-import img1 from "./img1.jpg";
-import img2 from "./img2.jpg";
-import img3 from "./img3.jpg";
-import img4 from "./img4.jpg";
-
 import './App.css';
 import { Typography, Grid } from '@mui/material';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Card from './pages/card/card.page'
 
 function App() {
   return (
     <div className="App">
+      
+    <Router>
+      <Routes>
+        <Route path="/" element={<Card/>} />
+        <Route path="/card" element={<Card/>} />
+      </Routes>
+    </Router>
       <div className="rectangle"></div>
-
-      {/* <header className="App-header"> */}
-      {/* <img src={logo} className="App-logo" alt="logo" />
-        <p>
-        Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-        >
-        Learn React
-      </a> */}
-      {/* </header> */}
       <div className="happy-cher-day">
         <Typography children="Happy" variant="h2"></Typography>
         <Typography children="Cher" variant="h2"></Typography>
