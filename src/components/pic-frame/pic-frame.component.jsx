@@ -4,8 +4,6 @@ import {frameStyles} from './pic-frame.styles';
 import './pic-frame.styles.css'
 import { jsx, css } from '@emotion/react'
 
-// import img1 from '../../../src/img1.jpg';
-
 export default class Image extends React.Component {
     render() {
         const rounded = this.props.rounded?"rounded":"square"
