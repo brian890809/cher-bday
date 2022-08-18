@@ -5,24 +5,33 @@
     bottom: 0;
     right: 0;
   }
-  .rectangle {
-    margin: auto;
-    height: 90vh;
-    width: 80vw;
-    background-color:#9ec8d4;
-    animation: scale-up-center 1.2s ease 0s 1 normal none;
-  }
-  @keyframes scale-up-center {
-    0%{
-      transform: scaleX(.2);
-    }
-    100%{
-      transform: scaleX(1);
-    }
+  
+  .section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
   }
   .happy-cher-day {
-    position: absolute;
-    top: 0;
-    left: 50;
-    color: white;
+    /* position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    color: black;
+    z-index: 10;
+  }
+
+  .MuiImageList-woven {
+    margin-top: 5vh;
+    max-width: 350px;
+  }
+
+  @media screen and (min-width: 900px) {
+    .MuiImageList-woven {
+      max-width: 50%;
+    }
+    .section {
+      padding-top: 150px;
+    }
   }

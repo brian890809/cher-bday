@@ -1,33 +1,28 @@
 import React from 'react';
-import { Typography, Grid } from '@mui/material';
-
+import { Typography } from '@mui/material';
 import './home.page.css';
-import {Button} from '../../components';
+import { WovenImageList } from '../../components';
+import img4 from "./../../img4.jpg";
+import img3 from "./../../img3.jpg";
+import img5 from "./../../img5.jpg";
+import img6 from "./../../img6.JPG";
+import img7 from "./../../img7.jpg";
+import img8 from "./../../img8.jpg";
+
+const imageList = [img7, img3, img8, img6, img5, img4]
 
 const Home = () => {
     return (
         <>
-            <div className="rectangle"></div>
-            <div className="happy-cher-day">
-                <Typography children="Happy" variant="h2"></Typography>
-                <Typography children="Cher" variant="h2"></Typography>
-                <Typography children="Day !" variant="h2"></Typography>
-            </div>
+                <div className="section">
+                    <div className="happy-cher-day">
+                        <Typography align="center" children="HAPPY CHER DAY!" variant="h2" sx={{ fontWeight: 'bold' }}></Typography>
+                    </div>
+                    <WovenImageList cols={3} gap={8} imageList={imageList} className="imgGrid" />
+                </div>
+            {/* <div className="section">
             
-      {/* <Grid container spacing={0} className="gridContainer" columns={36}>
-        <Grid item xs={23}>
-          <img src={img1} className="horizontal"/>
-        </Grid>
-        <Grid item xs={13}>
-          <img src={img2} className="vertical"/>
-        </Grid>
-        <Grid item xs={13}>
-          <img src={img3} className="vertical"/>
-        </Grid>
-        <Grid item xs={23}>
-          <img src={img4} className="horizontal"/>
-        </Grid>
-      </Grid> */}
+        </div> */}
         </>
     )
 }

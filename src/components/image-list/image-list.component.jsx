@@ -10,7 +10,7 @@ export default class WovenImageList extends React.Component {
             <ImageList variant="woven" cols={this.props.cols} gap={this.props.gap}>
                 {imageList.map((imageItem) => (
                     <ImageListItem>
-                        <Image rounded imgSrc={imageItem.imgSrc}/>
+                        <Image rounded src={imageItem}/>
                     </ImageListItem>
                 ))}
             </ImageList>
