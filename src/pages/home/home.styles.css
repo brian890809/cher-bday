@@ -1,4 +1,4 @@
-#root {
+.home {
   background-color: black;
 }
 
@@ -17,16 +17,8 @@
   100%{
     transform: scaleX(1);
   }
-}
+}  
 
-.gridContainer {
-    max-width: 60vw;
-    max-height: 60vh;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
-  
   .section {
     height: 100%;
     display: flex;
@@ -35,19 +27,18 @@
     padding-top: 100px;
   }
   .happy-cher-day {
-    /* position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
+    z-index: 4;
     color: black;
   }
 
   .MuiImageList-woven {
+    z-index: 4;
     margin-top: 5vh;
     max-width: 350px;
   }
 
-  .MuiGrid-container {
+  .home .MuiGrid-container {
+    z-index: 4;
     margin-top: 35vh;
   }
 
@@ -58,4 +49,8 @@
     .section {
       padding-top: 150px;
     }
+  }
+
+  .home .blob {
+    z-index: 4;
   }

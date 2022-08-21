@@ -5,11 +5,11 @@ import * as Icons from 'react-feather';
 
 export default class Pagination extends React.Component {
     render() {
-        const { next, child, ...props } = this.props;
+        const { next, children, ...props } = this.props;
         const Icon = (next === true) ? Icons["ArrowRight"] : Icons["ArrowLeft"];
-        const title = <Typography>{child}</Typography>
+        const title = <Typography>{children}</Typography>
         return (
-            <Button>
+            <Button {...props}>
                 {next === true ? <>{title}<Icon /></> : <><Icon />{title}</>}
             </Button>
         )

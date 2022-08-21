@@ -2,7 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import {frameStyles} from './pic-frame.styles';
 import './pic-frame.styles.css'
-import { jsx, css } from '@emotion/react'
+import { css } from '@emotion/react'
 
 export default class Image extends React.Component {
     render() {
@@ -12,7 +12,7 @@ export default class Image extends React.Component {
             <Box
                 component="img"
                 className={className}
-                // css={(theme) => frameStyles(theme, rounded)}
+                // css={() => frameStyles(rounded)}
                 src={this.props.src}
                 {...this.props}
             />

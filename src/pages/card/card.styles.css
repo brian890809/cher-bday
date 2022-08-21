@@ -1,0 +1,15 @@
+.card .carousel{
+    height: 100%;
+}
+
+.pagination {
+    position: fixed !important;
+    bottom: 0;
+}
+
+.pagination.prev {
+    left: 1vw;
+}
+.pagination.next {
+    right: 1vw;
+}

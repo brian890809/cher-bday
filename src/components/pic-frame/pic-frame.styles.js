@@ -1,9 +1,12 @@
-import { css, Theme } from '@emotion/react';
+import { css } from '@emotion/react';
 
-export const frameStyles = (theme, rounded) => {
+export const frameStyles = (rounded) => {
     return (css`
-    max-width: 50%;
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
     ${borderRadius(rounded)}
 `)};
 
-const borderRadius = ({theme, rounded}) => rounded?css`border-radius:8px`:css`border-radius:0px`
+const borderRadius = (rounded) => rounded?css`border-radius:15px`:css`border-radius:0px`
