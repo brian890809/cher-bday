@@ -10,17 +10,10 @@ import {ThemeProvider} from '@mui/material/styles';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { bgColor: "#000000"}
-  }
-  componentDidMount = () => {
-    setTimeout(() => this.setState({ bgColor: "#F5F5F5"}), 1500);
   }
   render() {
     return (
-      <div className="App" style={{
-        backgroundColor: this.state.bgColor
-      }}>
-      <div className="rectangle"/>
+      <div className="App">
       <Container maxWidth='lg' disableGutters={true}>
         <ThemeProvider theme={theme}>
           <Router>
