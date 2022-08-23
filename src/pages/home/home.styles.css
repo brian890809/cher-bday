@@ -53,4 +53,10 @@
 
   .home .blob {
     z-index: 4;
+    padding-top: 100px;
+  }
+
+  .home .btn {
+    margin-top: 100px;
+    margin-bottom: 150px;
   }

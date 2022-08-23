@@ -20,7 +20,6 @@ class Home extends React.Component {
     }
     componentDidMount = () => setTimeout(() => {
             let root = document.getElementsByClassName('home')
-            console.log(root)
             root.style.background = "#F5F5F5"
             this.setState({
             display: false,
@@ -30,14 +29,16 @@ class Home extends React.Component {
         return (
         <div className="home">
             {this.state.display ? <div className="rectangle" /> : null}
-            <div div className="section" >
+            <div className="section" >
                 <div className="happy-cher-day">
                     <Typography align="center" children="HAPPY CHER DAY!" variant="h2" sx={{ fontWeight: 'bold' }}></Typography>
                 </div>
                 <WovenImageList cols={3} gap={8} imageList={this.state.imageList} className="imgGrid"/>
+            </div>
+            <div className="section">
                 <Dots amount={3}/>
-                <Typography align="center" className="blob" variant="body1">Let's walk through the memory lane that belongs to just you and me</Typography>
-                <Button href="/card">proceed</Button>
+                <Typography align="center" className="blob" variant="h5">Let's walk through the memory lane that belongs to just you and me</Typography>
+                <Button href="/card" className="btn">proceed</Button>
             </div>
         </div>  
         )

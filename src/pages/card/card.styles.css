@@ -1,5 +1,13 @@
-.card .carousel{
+#card {
+    background-color:   #ffdc90;
+    min-height: 100vh;
+}
+
+#card .slider-settings{
     height: 100%;
+    padding-top: 10vh;
+    max-width: 85vw;
+    margin: auto;
 }
 
 .pagination {

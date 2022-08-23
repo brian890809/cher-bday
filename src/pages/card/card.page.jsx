@@ -1,52 +1,53 @@
 import React from 'react';
 import {Image, IconButton, Pagination} from './../../components'
-import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 import './card.styles.css'
-import Carousel from 'react-material-ui-carousel'
+
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import {pageStyle} from './card.styles'
 import { css } from '@emotion/react'
-import img1 from "./assets/img1.jpg";
 
-const Card = () => {
-    const imageList = [{img1}, img1, img1]
-
-    return (
-        <div className="card">
-            <Carousel autoPlay={false} navButtonsAlwaysVisible={true} height={500}
-            NextIcon={<IconButton color="primary" children="ChevronRight" />}
-            PrevIcon={<IconButton children="ChevronLeft" />}
-            navButtonsProps={{          // Change the colors and radius of the actual buttons. THIS STYLES BOTH BUTTONS
-                style: {
-                    backgroundColor: "transparent",
-                    borderRadius: 0
-                }
-            }}
-            classes="carousel"
-            sx={{maxWidth: '300px', height: '100%'}} 
-            >
-                <div>
-                    <Image src={img1} rounded/>
-                    <h3>hello</h3>
-                </div>
-                <Image src={img1} rounded/>
-                <Image src={img1} rounded/>
-            </Carousel>
-            {/* <Grid container justifyContent="space-evenly" alignItems="center">
-                <Grid item xs={1}>
-                    <IconButton children="ChevronLeft" />
-                </Grid>
-                <Grid item xs={10}>
-                    <Image src={img1} rounded />
-                </Grid>
-                <Grid item xs={1}>
-                    <IconButton children="ChevronRight" />
-                </Grid>
-            </Grid> */}
-            <Pagination className="pagination prev" children="Home" href="/"/>
-            <Pagination className="pagination next" next children="Love Letter" href="/love-letter"/>
-            {/* <IconButton children="ChevronLeft"/> */}
-        </div>
-    )
+import { data } from './images-descript-bg'
+class Card extends React.Component  {
+    constructor(props) {
+        super(props);
+    }
+    imageCarousel = (imgObj) => {
+        return(
+        <>
+            <div className="carouselImg">
+                <Image src={imgObj.src} sx={{maxWidth: '80vh', maxHeight: '70vh', margin: 'auto',}} rounded/>
+            </div>
+            <Typography variant="subtitle1" children={imgObj.children} align="center"/>
+        </>
+    )}
+    changeBG = (prevIndex, nextIndex) => {
+        let cardElement = document.getElementById("card");
+        cardElement.style.background = data[nextIndex].bgColor;
+    }
+    settings = {
+        arrows: "false",
+        className: 'slider-settings',
+        fade: true,
+        dots: true,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        beforeChange: this.changeBG,
+    }
+    render() {
+        return (
+            <div id="card">
+                <Slider {...this.settings}>
+                    {data.map(imgObj =>this.imageCarousel(imgObj))}
+                </Slider>
+                <Pagination sx={{color: 'black'}} className="pagination prev" children="Home" href="/"/>
+                <Pagination sx={{color: 'black'}} className="pagination next" next children="Love Letter" href="/love-letter"/>
+                {/* <IconButton children="ChevronLeft"/> */}
+            </div>
+        )
+    }
 }
 
 export default Card;
