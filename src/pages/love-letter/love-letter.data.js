@@ -1,0 +1,8 @@
+export const data = {
+    title: "Dear Cher:",
+    motto: "It's just you and me",
+    body: "First of all I would like to apologize that this is my first time creating a website from scratch. I have put a lot of effort into designing and figuring out the pieces to put together. The hours I have put in and the output doesn't match up as there are lot more things I wanted to include but didn't have the time to. Anyways, I hope you like what I have done for you.",
+    body2: "You are the reason why I ever considered going back to Taiwan, I followed through my promise to you. During the time in the US alone, I had a hard time adjusting myself to be alone. I expected it to not be easy, but I did not expect it to be that hard. This isn't a kind of adjustment that you make for a friend, but a person you like so deeply and someone you want to spend your future with. I miss you so much while in Berkeley.",
+    body3: "I know that I have said many times, but I want to say this again here: Thank you for extending your flight to Taiwan until end of July. The extra time you spent in the US made my summer much more colourful. I had so much laughter, so much love because of you. There was not a single moment where I am not happy with you around. Everyting is simply better when you're around. It is true that we will not see each other for a long time after my visit in Taiwan, but I can't wait to see you at the end of the year, when we have become a better version of ourselves. Then, please let me hold your hands, and let me take you around the world with me.",
+    signature: "-Brian"
+}

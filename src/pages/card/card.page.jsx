@@ -44,7 +44,6 @@ class Card extends React.Component  {
                 </Slider>
                 <Pagination sx={{color: 'black'}} className="pagination prev" children="Home" href="/"/>
                 <Pagination sx={{color: 'black'}} className="pagination next" next children="Love Letter" href="/love-letter"/>
-                {/* <IconButton children="ChevronLeft"/> */}
             </div>
         )
     }
